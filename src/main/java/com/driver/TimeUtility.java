@@ -10,6 +10,12 @@ public class TimeUtility {
     public static String convertDeliveryTime(int deliveryTime) {
         String hh = String.valueOf(deliveryTime/60);
         String mm = String.valueOf(deliveryTime%60);
-        return String.format("%s:%s", hh, mm);
+        if(hh.length() == 1){
+            hh = "0" + hh;
+        }
+        if(mm.length() == 1){
+            mm = "0" + mm;
+        }
+        return hh+":"+mm;
     }
 }
