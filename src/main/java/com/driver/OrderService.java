@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
-
+@Service
 public class OrderService {
     private OrderRepository orderRepository = new OrderRepository();
     public void addOrder(Order order) {
